@@ -1,9 +1,12 @@
 ﻿using Firstborn.pages;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using Firstborn.utilities;
-using OpenQA.Selenium.Interactions;
-    
+
+
+namespace Firstborn.tests
+{
+    public class nunit_test
+    {
         IWebDriver chrome = new ChromeDriver();
 
         //login page object intialization and definition
@@ -13,14 +16,11 @@ using OpenQA.Selenium.Interactions;
 
         homegape HomePageObj = new homegape();
         HomePageObj.GoToTMPage(chrome);
-    
+
         tmpage TmPageOBJ = new tmpage();
         TmPageOBJ.CreateTM(chrome);
 
         TmPageOBJ.EditTM(chrome);
 
-        TmPageOBJ.DeleteTM(chrome);
-
-        chrome.Quit();
-          
-   
+    }
+}
